@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<facelet-taglib
+        xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facelettaglibrary_2_0.xsd"
+        version="2.0">
+
+    <namespace>http://roamingthings.de/playground/hello/tags</namespace>
+
+    <!--
+      - helloProxy Component
+      -->
+    <tag>
+        <tag-name>helloProxy</tag-name>
+        <handler-class>de.roamingthings.jsf.components.tag.HelloProxyTagHandler</handler-class>
+
+        <attribute>
+            <description>The id of the generated component.</description>
+            <name>id</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+        </attribute>
+
+        <attribute>
+            <description>The name to be displayed</description>
+            <name>helloName</name>
+            <type>java.lang.String</type>
+        </attribute>
+
+        <attribute>
+            <description>The tag name of the composite component to be inserted</description>
+            <name>componentTagName</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+        </attribute>
+
+        <attribute>
+            <description>The namespace of the composite component to be inserted. Defaults to http://xmlns.jcp.org/jsf/composite/myTaglib</description>
+            <name>componentNameSpace</name>
+            <required>false</required>
+            <type>java.lang.String</type>
+        </attribute>
+
+        <attribute>
+            <description>Value to be passed to the proxied component.</description>
+            <name>value</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+        </attribute>
+    </tag>
+</facelet-taglib>

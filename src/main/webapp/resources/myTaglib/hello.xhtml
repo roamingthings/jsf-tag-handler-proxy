@@ -1,0 +1,26 @@
+<ui:component xmlns="http://www.w3.org/1999/xhtml"
+              xmlns:ui="http://java.sun.com/jsf/facelets"
+              xmlns:cc="http://java.sun.com/jsf/composite"
+              xmlns:f="http://java.sun.com/jsf/core"
+              xmlns:h="http://java.sun.com/jsf/html"
+              xmlns:c="http://java.sun.com/jsp/jstl/core"
+              xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+>
+
+    <cc:interface name="hello" componentType="de.roamingthings.cc.helloCC">
+        <cc:attribute name="helloName" type="java.lang.String"
+                      shortDescription="A name to say hello" />
+        <cc:attribute name="value"
+                      shortDescription="Value to be edited" />
+        <cc:editableValueHolder name="input" targets="theInput"/>
+    </cc:interface>
+
+    <cc:implementation>
+        <div>
+            Hello, #{cc.helloName}!
+        </div>
+        <div>
+            <h:inputText id="theInput" value="#{cc.attrs.value}" binding="#{cc.inputComponent}"/>
+        </div>
+   </cc:implementation>
+</ui:component>
