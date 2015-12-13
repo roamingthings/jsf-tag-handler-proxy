@@ -1,0 +1,26 @@
+<ui:component xmlns="http://www.w3.org/1999/xhtml"
+              xmlns:ui="http://java.sun.com/jsf/facelets"
+              xmlns:cc="http://java.sun.com/jsf/composite"
+              xmlns:f="http://java.sun.com/jsf/core"
+              xmlns:h="http://java.sun.com/jsf/html"
+              xmlns:c="http://java.sun.com/jsp/jstl/core"
+              xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+>
+
+    <cc:interface name="inputDecorator" componentType="de.roamingthings.cc.inputDecorator">
+        <cc:attribute name="editableInputId" type="java.lang.String"
+                      shortDescription="The id of the input component embeded in this component as a child component."/>
+
+        <cc:attribute name="labelText" type="java.lang.String"
+                      shortDescription="The label text to be shown."/>
+    </cc:interface>
+
+    <cc:implementation>
+        <div>
+            <h:outputLabel for="#{cc.attrs.editableInputId}">#{cc.attrs.labelText}</h:outputLabel>
+            <div>
+                <cc:insertChildren/>
+            </div>
+        </div>
+    </cc:implementation>
+</ui:component>

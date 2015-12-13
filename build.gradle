@@ -11,7 +11,7 @@ ext {
 }
 
 group 'de.roamingthings.jsf'
-version '1.0'
+version '1.1-SNAPSHOT'
 
 apply plugin: JavaPlugin
 apply plugin: 'war'
