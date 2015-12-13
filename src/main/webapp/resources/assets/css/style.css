@@ -1,0 +1,42 @@
+body {
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #444;
+}
+
+fieldset {
+    border: none;
+    margin: 10px 0;
+}
+
+label {
+    font-weight: bold;
+}
+
+.form-input {
+}
+
+.form-output {
+}
+
+.form-actions{
+    padding: 10px;
+}
+
+.proxy-output {
+    margin: 5px;
+    background-color: #a7dcff;
+}
+
+.help-text {
+    font-style: italic;
+    font-size: 12px;
+}
+
+.btn {
+    border: 1px solid #444;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background-color: #eee;
+}
